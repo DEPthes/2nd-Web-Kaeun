@@ -61,7 +61,7 @@ const ToDoList = () => {
   };
 
   const ToDoAddHandler = (newTodo, newDate) => {
-    if (newTodo.trim() !== "") {
+    if (newTodo.trim() !== "" && newDate.trim() !== "") {
       const newId = todos.length.toString();
       const newTodoItem = {
         id: newId,
