@@ -36,6 +36,7 @@ const Card = styled.div`
   background-color: #fff;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   margin: 5rem auto;
+  margin-bottom: 2rem;
   width: 30rem;
   max-width: 95%;
 
@@ -49,7 +50,21 @@ const Card = styled.div`
   }
 `;
 
-const ToDoList = () => {
+const LogoutBtn = styled.button`
+  font-family: inherit;
+  font-size: 15px;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  background: #c37a7a;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  padding: 0.3rem 1.1rem 0.5rem;
+  display: flex;
+  margin: 0 auto;
+  cursor: pointer;
+`;
+
+const ToDoList = (props) => {
   const [todos, setTodos] = useState(DUMMY_TODO);
   const [filter, setFilter] = useState("all");
 
@@ -88,19 +103,22 @@ const ToDoList = () => {
   };
 
   return (
-    <Card>
-      <h2>To Do List</h2>
-      <ToDoFilter FilterChangeHandler={FilterChangeHandler} />
-      {filteredTodos().map((todo) => (
-        <ToDoItem
-          key={todo.id}
-          todo={todo}
-          CheckboxChangeHandler={CheckboxChangeHandler}
-        />
-      ))}
-      <hr />
-      <ToDoAdd todoAddHandle={ToDoAddHandler} />
-    </Card>
+    <>
+      <Card>
+        <h2>To Do List</h2>
+        <ToDoFilter FilterChangeHandler={FilterChangeHandler} />
+        {filteredTodos().map((todo) => (
+          <ToDoItem
+            key={todo.id}
+            todo={todo}
+            CheckboxChangeHandler={CheckboxChangeHandler}
+          />
+        ))}
+        <hr />
+        <ToDoAdd todoAddHandle={ToDoAddHandler} />
+      </Card>
+      <LogoutBtn onClick={props.onLogout}>Logout</LogoutBtn>
+    </>
   );
 };
 

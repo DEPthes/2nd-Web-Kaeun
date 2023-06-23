@@ -27,6 +27,7 @@ const ToDoForm = styled.form`
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     margin: 0.5rem 0.3rem;
     padding: 0.2rem 0.9rem;
+    cursor: pointer;
   }
 `;
 

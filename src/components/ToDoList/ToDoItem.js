@@ -15,6 +15,7 @@ const ToDoDiv = styled.div`
 
 const ToDoCheck = styled.input`
   accent-color: #c37a7a;
+  cursor: pointer;
 `;
 
 const TodoItem = ({ todo, CheckboxChangeHandler }) => {

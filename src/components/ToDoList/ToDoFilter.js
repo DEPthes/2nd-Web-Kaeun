@@ -14,6 +14,7 @@ const ToDoFilterDiv = styled.div`
     border: 1px solid #c37a7a;
     border-radius: 100px;
     outline: none;
+    cursor: pointer;
   }
 `;
 
