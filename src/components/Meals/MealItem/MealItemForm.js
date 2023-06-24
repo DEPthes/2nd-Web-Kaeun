@@ -38,7 +38,7 @@ const MealItemForm = (props) => {
           defaultValue: "1",
         }}
       />
-      <button>+ Add</button>
+      <button>ADD</button>
       {!amountIsValid && <p>유효한 수량(1-5)을 입력하세요!</p>}
     </form>
   );

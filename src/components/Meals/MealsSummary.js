@@ -3,15 +3,8 @@ import classes from "./MealsSummary.module.css";
 const MealsSummary = () => {
   return (
     <section className={classes.summary}>
-      <h2>Delicious Food, Delivered To You</h2>
-      <p>
-        Choose your favorite meal from our broad selection of available meals
-        and enjoy a delicious lunch or dinner at home.
-      </p>
-      <p>
-        All our meals are cooked with high-quality ingredients, just-in-time and
-        of course by experienced chefs!
-      </p>
+      <h2>가뿡마켓에 오신 걸 환영합니다</h2>
+      <p>가뿡마켓은 다양한 과자와 아이스크림, 라면을 판매하는 마켓입니다 :)</p>
     </section>
   );
 };
