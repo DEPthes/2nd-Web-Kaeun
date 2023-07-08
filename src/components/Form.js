@@ -70,7 +70,7 @@ const BasicForm = (props) => {
         <div className={idClasses}>
           <label htmlFor="email">아이디</label>
           <input
-            type="text"
+            type="email"
             id="email"
             placeholder="text@naver.com"
             value={idValue}
