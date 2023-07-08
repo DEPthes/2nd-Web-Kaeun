@@ -68,10 +68,10 @@ const BasicForm = (props) => {
     <form onSubmit={submitHandler}>
       <div className="control-group">
         <div className={idClasses}>
-          <label htmlFor="id">아이디</label>
+          <label htmlFor="email">아이디</label>
           <input
             type="text"
-            id="id"
+            id="email"
             placeholder="text@naver.com"
             value={idValue}
             onChange={idChangeHandler}
