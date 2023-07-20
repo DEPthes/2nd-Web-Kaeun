@@ -1,0 +1,25 @@
+.categories {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.categories button {
+  font: inherit;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid #c37a7a;
+  color: #c37a7a;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.categories button:hover,
+.categories button:active {
+  background-color: #c37a7a;
+  border-color: #c37a7a;
+  color: white;
+}

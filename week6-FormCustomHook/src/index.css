@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poor+Story&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poor Story", cursive;
+}
+
+body {
+  margin: 0;
+  background-color: #f8e3e3;
+}
+
+::selection {
+  background: #f8e3e3;
+}
+
+::-moz-selection {
+  background: #f8e3e3;
+}
+
+.app {
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  margin: 5rem auto;
+  width: 30rem;
+  max-width: 95%;
+}
+
+.app h2 {
+  text-align: center;
+  color: #a35454;
+}
+
+.form-control input,
+.form-control label {
+  display: block;
+}
+
+.form-control label {
+  font-weight: bold;
+  flex: 1;
+  color: #af5d5d;
+  margin-bottom: 0.5rem;
+}
+
+.form-control input,
+.form-control select {
+  flex: 3;
+  font: inherit;
+  padding: 0.35rem 0.35rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form-control input:focus {
+  outline: none;
+  border-color: #4f005f;
+  background: #fdf6ff;
+}
+
+.control-group .form-control {
+  margin: 1rem 0;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+button {
+  font-family: inherit;
+  font-size: 15px;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  background: #c37a7a;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  margin: 0.5rem 0.3rem;
+  padding: 0.3rem 1.1rem 0.5rem;
+  cursor: pointer;
+}
+
+button:hover,
+button:active {
+  background-color: #b06a6a;
+}
+
+button:disabled,
+button:disabled:hover,
+button:disabled:active {
+  background-color: #e8d9d9;
+  color: #c49f9f;
+  cursor: not-allowed;
+}
+
+.form-actions {
+  text-align: center;
+}
+
+.invalid input {
+  border-color: red;
+  background: #fbdada;
+}
+
+.invalid input:focus {
+  border-color: #c59494;
+  background-color: rgb(247, 236, 236);
+}
+
+.error-text {
+  color: #c02f2f;
+}
