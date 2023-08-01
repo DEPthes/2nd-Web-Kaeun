@@ -1,0 +1,114 @@
+.container {
+  display: inline-block;
+  height: 150px;
+  perspective: 600px;
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease 0s;
+  transform-style: preserve-3d;
+}
+
+.card-front {
+  background-color: rgb(233, 192, 192);
+  transform: rotateY(180deg);
+}
+
+.card-back {
+  background-color: rgb(202, 159, 159);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.container.flipped {
+  display: inline-block;
+  height: 150px;
+  perspective: 600px;
+  cursor: pointer;
+}
+
+.container.flipped .card {
+  transform: rotateY(180deg);
+}
+
+.card h2 {
+  text-align: center;
+  color: #fff;
+  padding: 40px;
+}
+
+@media (max-width: 660px) {
+  .card h2 {
+    padding-left: 38px;
+  }
+}
+
+@media (max-width: 640px) {
+  .card h2 {
+    padding-left: 35px;
+  }
+}
+
+@media (max-width: 610px) {
+  .card h2 {
+    padding-left: 32px;
+  }
+}
+
+@media (max-width: 555px) {
+  .card h2 {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 523px) {
+  .card h2 {
+    padding-left: 27px;
+  }
+}
+
+@media (max-width: 493px) {
+  .card h2 {
+    padding-left: 23px;
+  }
+}
+
+@media (max-width: 435px) {
+  .card h2 {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .card h2 {
+    padding-left: 17px;
+  }
+}
+
+@media (max-width: 350px) {
+  .card h2 {
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 333px) {
+  .card h2 {
+    padding-left: 13px;
+  }
+}
+
+@media (max-width: 300px) {
+  .card h2 {
+    padding-left: 10px;
+  }
+}

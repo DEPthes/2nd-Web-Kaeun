@@ -2,24 +2,30 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./StartPage.css";
 
-const StartPage = () => {
+type Card = {
+  value: number;
+  visible: boolean;
+};
+
+const StartPage: React.FC = () => {
   const [num, setNum] = useState("");
-  const [array, setArray] = useState([]);
+  const [array, setArray] = useState<Card[]>([]);
   const navigate = useNavigate();
 
   //array의 숫자들 랜덤하게 섞기
-  const shuffle = (array) => {
+  const shuffle = (array: Card[]) => {
     return array.sort(() => Math.random() - 0.5);
   };
 
   const StartHandler = () => {
     //입력받은 숫자가 1보다 작거나 20보다 크면 경고 알림, 입력받은 숫자 초기화
-    if (num > 20 || num < 1) {
+    if (+num > 20 || +num < 1) {
+      //+ 단항 연산자를 사용해서 문자열을 숫자로 변환
       alert("1부터 20까지 숫자만 가능합니다.");
       setNum("");
     } else {
       //그렇지 않으면 배열에 입력받은 수 만큼의 쌍 넣기
-      for (let i = 1; i <= num; i++) {
+      for (let i = 1; i <= +num; i++) {
         array.push({ value: i, visible: true });
         array.push({ value: i, visible: true });
       }
@@ -27,7 +33,7 @@ const StartPage = () => {
       setArray(array);
       navigate("/game", {
         state: {
-          num,
+          num: +num,
           array,
         },
         replace: true,
@@ -36,7 +42,7 @@ const StartPage = () => {
   };
 
   //enter 키 눌렀을 때도 시작되게 함
-  const handleOnKeyPress = (e) => {
+  const handleOnKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       StartHandler();
     }

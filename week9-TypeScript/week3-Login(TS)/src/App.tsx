@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Login from "./components/Login/Login";
-import ToDoList from "./components/ToDoList/ToDoList";
+import Login from "./components/Login";
+import Main from "./components/Main";
 import AuthContext from "./store/auth-context";
 
-const App = () => {
+const App: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const App = () => {
     >
       <main>
         {!isLoggedIn && <Login onLogin={loginHandler} />}
-        {isLoggedIn && <ToDoList onLogout={logoutHandler} />}
+        {isLoggedIn && <Main onLogout={logoutHandler} />}
       </main>
     </AuthContext.Provider>
   );
